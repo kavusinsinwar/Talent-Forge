@@ -1,30 +1,30 @@
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
-import companies from "../data/companies.json"
-import faqs from "../data/faq.json"
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import companies from "../data/companies.json";
+import faqs from "../data/faq.json";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { Link } from "react-router-dom"
-import { colors } from "../styles/color"
-import { Sparkles } from 'lucide-react'
+} from "@/components/ui/accordion";
+import { Link } from "react-router-dom";
+import { colors } from "../styles/color";
+import { Sparkles } from 'lucide-react';
 import { TalentForgeLogo } from "../components/talent-forge-logo";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
+  transition: { duration: 0.6 },
+};
 
 const LandingPage = () => {
   return (
@@ -37,14 +37,14 @@ const LandingPage = () => {
       </div>
 
       <main className="relative z-10 flex flex-col gap-10 sm:gap-20 py-10 sm:py-20 px-4 max-w-7xl mx-auto">
-        <motion.section 
+        <motion.section
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <div className="relative inline-block">
-            <motion.h1 
+            <motion.h1
               className="flex flex-col items-center justify-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter py-4"
               style={{
                 background: `linear-gradient(135deg, ${colors.brightBlue}, ${colors.blueGreen}, ${colors.dustyWhite}, ${colors.pinkSand})`,
@@ -55,7 +55,10 @@ const LandingPage = () => {
               Find Your Dream Job
               <span className="flex items-center gap-2 sm:gap-4 md:gap-6">
                 and get
-                <TalentForgeLogo size="large" className="h-12 sm:h-16 md:h-20 lg:h-24" />
+                <TalentForgeLogo
+                  size="large"
+                  className="h-10 sm:h-16 md:h-20 lg:h-24"
+                />
               </span>
             </motion.h1>
             <motion.div
@@ -66,7 +69,7 @@ const LandingPage = () => {
               <Sparkles className="w-8 h-8" />
             </motion.div>
           </div>
-          <motion.p 
+          <motion.p
             className="text-gray-300 sm:mt-4 text-xs sm:text-lg md:text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -76,21 +79,22 @@ const LandingPage = () => {
           </motion.p>
         </motion.section>
 
-        <motion.div 
-          className="flex gap-6 justify-center"
+        {/* Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-6 justify-center"
           variants={fadeInUp}
           initial="initial"
           animate="animate"
         >
           <Link to="/jobs">
-            <Button 
+            <Button
               className="bg-[#97f3ff] hover:bg-[#51e2f5]/90 text-black font-semibold px-8 py-3 text-lg"
             >
               Find Jobs
             </Button>
           </Link>
           <Link to="/post-job">
-            <Button 
+            <Button
               className="bg-[#fd526e] hover:bg-[#ffa8b6]/90 text-black font-semibold px-8 py-3 text-lg"
             >
               Post a Job
@@ -98,12 +102,13 @@ const LandingPage = () => {
           </Link>
         </motion.div>
 
+        {/* Carousel */}
         <div className="relative">
           <Carousel
-            plugins={[ 
+            plugins={[
               Autoplay({
                 delay: 2000,
-              })
+              }),
             ]}
             className="w-full py-10"
           >
@@ -123,15 +128,17 @@ const LandingPage = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-transparent to-gray-900" />
         </div>
 
-        <motion.img 
-          src="/Banner1.jpg" 
+        {/* Banner Image */}
+        <motion.img
+          src="/Banner1.jpg"
           className="w-full rounded-xl shadow-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         />
 
-        <motion.section 
+        {/* Cards Section */}
+        <motion.section
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={fadeInUp}
           initial="initial"
@@ -155,10 +162,11 @@ const LandingPage = () => {
           </Card>
         </motion.section>
 
+        {/* FAQ Accordion */}
         <Accordion type="multiple" className="w-full space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`item-${index + 1}`}
               className="border border-gray-700/50 rounded-lg backdrop-blur bg-gray-800/30"
             >
@@ -173,7 +181,7 @@ const LandingPage = () => {
         </Accordion>
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
