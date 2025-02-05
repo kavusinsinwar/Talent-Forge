@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 export function TalentForgeLogo({ className = "", size = "default" }) {
   const sizeClasses = {
     small: "text-2xl md:text-3xl",
-    default: "text-4xl md:text-5xl",
-    large: "text-6xl md:text-8xl",
+    default: "text-4xl md:text-5xl lg:text-6xl",
+    large: "text-6xl md:text-8xl lg:text-9xl",
   };
 
   return (
@@ -49,4 +49,3 @@ export function TalentForgeLogo({ className = "", size = "default" }) {
     </motion.div>
   );
 }
-
