@@ -45,17 +45,17 @@ const LandingPage = () => {
         >
           <div className="relative inline-block">
             <motion.h1 
-              className="flex flex-col items-center justify-center font-extrabold text-4xl sm:text-6xl lg:text-8xl tracking-tighter py-4"
+              className="flex flex-col items-center justify-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter py-4"
               style={{
                 background: `linear-gradient(135deg, ${colors.brightBlue}, ${colors.blueGreen}, ${colors.dustyWhite}, ${colors.pinkSand})`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Discover Your Dream Career
-              <span className="flex items-center gap-2 sm:gap-6">
-                and start your journey with
-                <TalentForgeLogo size="large" className="h-14 sm:h-20 md:h-24 lg:h-32" />
+              Find Your Dream Job
+              <span className="flex items-center gap-2 sm:gap-4 md:gap-6">
+                and get
+                <TalentForgeLogo size="large" className="h-12 sm:h-16 md:h-20 lg:h-24" />
               </span>
             </motion.h1>
             <motion.div
@@ -67,12 +67,12 @@ const LandingPage = () => {
             </motion.div>
           </div>
           <motion.p 
-            className="text-gray-300 sm:mt-4 text-xs sm:text-xl"
+            className="text-gray-300 sm:mt-4 text-xs sm:text-lg md:text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Explore thousands of job listings or connect with top talent today!
+            Explore thousands of job listings or find the perfect candidate
           </motion.p>
         </motion.section>
 
