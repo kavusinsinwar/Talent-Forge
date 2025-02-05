@@ -52,10 +52,10 @@ const LandingPage = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Find Your Dream Job
+              Discover Your Dream Career
               <span className="flex items-center gap-2 sm:gap-6">
-                and get
-                <TalentForgeLogo size="large" className="h-14 sm:h-24 lg:h-32" />
+                and start your journey with
+                <TalentForgeLogo size="large" className="h-14 sm:h-20 md:h-24 lg:h-32" />
               </span>
             </motion.h1>
             <motion.div
@@ -72,7 +72,7 @@ const LandingPage = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Explore thousands of job listings or find the perfect candidate
+            Explore thousands of job listings or connect with top talent today!
           </motion.p>
         </motion.section>
 
@@ -125,7 +125,7 @@ const LandingPage = () => {
 
         <motion.img 
           src="/Banner1.jpg" 
-          className="w-full rounded-xl  shadow-2xl"
+          className="w-full rounded-xl shadow-2xl"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
