@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 export function TalentForgeLogo({ className = "", size = "default" }) {
   const sizeClasses = {
-    small: "text-2xl md:text-3xl",
-    default: "text-4xl md:text-5xl lg:text-6xl",
-    large: "text-6xl md:text-8xl lg:text-9xl",
+    small: "text-[4vw] md:text-[5vw] lg:text-[6vw]",
+    default: "text-[6vw] md:text-[7vw] lg:text-[8vw]",
+    large: "text-[8vw] md:text-[10vw] lg:text-[12vw]",
   };
 
   return (
